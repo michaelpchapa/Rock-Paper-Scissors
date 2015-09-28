@@ -4,9 +4,11 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 
 import com.wesleyreisz.rockpaperscissors.Game.GameType;
+import com.wesleyreisz.rockpaperscissors.Game.Lizard;
 import com.wesleyreisz.rockpaperscissors.Game.Paper;
 import com.wesleyreisz.rockpaperscissors.Game.Rock;
 import com.wesleyreisz.rockpaperscissors.Game.Scissors;
+import com.wesleyreisz.rockpaperscissors.Game.Spock;
 
 import java.util.Random;
 
@@ -22,12 +24,17 @@ public class GameUtils {
         Integer selectedValue;
         Random r = new Random(System.currentTimeMillis());
 
-        selectedValue = r.nextInt(3);//
+        selectedValue = r.nextInt(5);//
         if(selectedValue==0){
             return R.id.btnRock;
-        }else if (selectedValue==1){
+        }else if (selectedValue==1) {
             return R.id.btnPaper;
-        }else{
+        } else if (selectedValue==1){
+                return R.id.btnLizard;
+        }else if (selectedValue==1) {
+            return R.id.btnSpock;
+        }
+        else{
             return R.id.btnScissors;
         }
     }
@@ -37,6 +44,10 @@ public class GameUtils {
             return R.drawable.rock;
         }else if (buttonChoice==R.id.btnPaper){
             return R.drawable.paper;
+        }else if (buttonChoice==R.id.btnLizard){
+            return R.drawable.lizard;
+        }else if (buttonChoice==R.id.btnSpock){
+            return R.drawable.spock;
         }else{
             return R.drawable.scissors;
         }
@@ -49,6 +60,10 @@ public class GameUtils {
             gameType = new Rock();
         }else if  (playerSelectedChoice==R.id.btnPaper){
             gameType = new Paper();
+        }else if  (playerSelectedChoice==R.id.btnLizard){
+            gameType = new Lizard();
+        }else if  (playerSelectedChoice==R.id.btnSpock){
+            gameType = new Spock();
         }else{
             gameType = new Scissors();
         }

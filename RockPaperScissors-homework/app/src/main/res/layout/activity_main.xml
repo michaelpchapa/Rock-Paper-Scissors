@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnRock"
         android:backgroundTint="@android:color/transparent"
-        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@id/btnRock"
         android:src="@drawable/rock"
         android:layout_above="@id/btnPaper"
         />
@@ -30,9 +30,27 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnScissors"
         android:backgroundTint="@android:color/transparent"
-        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/btnPaper"
         android:src="@drawable/scissors"
         android:layout_below="@id/btnPaper"
+        />
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/btnLizard"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_toLeftOf="@id/btnPaper"
+        android:layout_below="@id/btnPaper"
+        android:src="@drawable/lizard"
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSpock"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_toRightOf="@id/btnPaper"
+        android:layout_above="@id/btnPaper"
+        android:src="@drawable/spock"
         />
 
 </RelativeLayout>
